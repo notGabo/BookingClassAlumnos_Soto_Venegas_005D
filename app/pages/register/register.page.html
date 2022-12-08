@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="formularioRegistro" (keyup.enter)="RevisarCorreo()">
+    <ion-card>
+      <ion-item>
+        <ion-label>Correo</ion-label>
+        <ion-input type="email" placeholder="correo@duoc.cl" name="inputCorreo"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" formControlName="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="text" pattern="[A-za-z]{3,12}" placeholder="Roberto" name="inputNombre"
+          formControlName="nombre" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Apellido</ion-label>
+        <ion-input type="text" pattern="[A-za-z]{3,12}" placeholder="Olivares" name="inputApellido"
+          formControlName="apellido" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" placeholder="*********" name="repetirInputContraseña" formControlName="password"
+          required></ion-input>
+      </ion-item>
+    </ion-card>
+    <center>
+      <ion-button (click)="RevisarCorreo()" type="submit" color="tertiary" shape="round">
+        Registrarse</ion-button>
+    </center>
+  </form>
+</ion-content>
+<ion-footer>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</ion-footer>

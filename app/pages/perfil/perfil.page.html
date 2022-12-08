@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="cardDatos">
+    <ion-card-content>
+      <ion-icon class="svg" name="person-circle-outline"></ion-icon>
+      <ion-item>
+        <ion-label class="textLabel">Nombre</ion-label>
+        <p class="textData">{{getNombre()}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label class="textLabel">Apellido</ion-label>
+        <p class="textData">{{getApellido()}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label class="textLabel">Correo</ion-label>
+        <p class="textData">{{getCorreo()}}</p>
+      </ion-item>
+    </ion-card-content>
+    <!-- Aquí va el botón que cierra sesion -->
+  </ion-card>
+  <ion-button (click)="cerrarSesion()" expand="full" shape="round" color="tertiary">
+    Cerrar sesión
+  </ion-button>
+</ion-content>

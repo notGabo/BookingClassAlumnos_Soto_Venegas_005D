@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ingresar a clase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="startScan()" expand="full" color="tertiary" shape="round">
+    <ion-icon slot="start" name="scan"></ion-icon>
+    Escanear!
+  </ion-button>
+  <p>Estas presente! El link de la clase es {{codigoEscaneado}}</p>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Feriados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12" *ngFor="let holiday of feriado;">
+        <ion-card class="cardFeriado">
+          <ion-card-header>
+            <ion-card-title>{{holiday.nombre}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p *ngIf="holiday.irrenunciable == 0">Renunciable</p>
+            <p *ngIf="holiday.irrenunciable == 1">Irrenunciable</p>
+            <p>{{holiday.fecha}}</p>
+            <p>{{holiday.tipo}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

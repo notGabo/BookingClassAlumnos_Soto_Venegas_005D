@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Iniciar sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <form [formGroup]="formularioLogin">
+    <ion-card>
+      <div>
+        <ion-item>
+          <ion-label>Correo Alumno</ion-label>
+          <ion-input formControlName="email" type="email" placeholder="alumno@duocuc.cl" name="inputCorreoAlumno"
+            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="*********" name="inputContraseñaAlumno"
+            required></ion-input>
+        </ion-item>
+      </div>
+    </ion-card>
+    <center>
+      <ion-button (click)="Ingresar()" type="submit" color="tertiary" shape="round">
+        Entrar</ion-button>
+    </center>
+  </form>
+
+  <img class="image" src="./assets/universitariosHome.png" alt="">
+
+  <a href=""></a>
+
+</ion-content>
+
+
+<ion-footer>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</ion-footer>

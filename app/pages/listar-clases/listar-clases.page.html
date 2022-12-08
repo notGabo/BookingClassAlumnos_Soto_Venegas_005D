@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="custom1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista de clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12" *ngFor="let c of clases;">
+        <ion-card class="cardClase">
+          <ion-card-header>
+            <center>
+              <ion-card-title>{{c.codigo}}</ion-card-title>
+            </center>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Numero de clase: {{c.numero}}</p>
+            <p>Hora de inicio: {{c.horaInicio}}</p>
+            <p>Hora de termino: {{c.horaTermino}}</p>
+            <p>Sala: {{c.sala}}</p>
+            <p>Codigo QR: </p>
+            <center>
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=225x225&data=www.bookingclass.cl/Clase={{c.numero}}/Asignatura={{c.codigo}}/Sala={{c.sala}}"
+                alt="">
+            </center>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

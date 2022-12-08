@@ -1,0 +1,23 @@
+.mainBackground {
+    --background: url('/assets/videoIntro.gif') 0 0/100% 100% no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0);
+    margin: 60% auto;
+    box-shadow: none !important;
+
+
+}
+
+p,
+ion-card-title {
+    text-align: center;
+    color: white;
+}
+
+ion-button {
+    margin: 1em;
+}
