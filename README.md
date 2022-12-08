@@ -17,7 +17,7 @@ Esta siendo hosteado en una maquina virtual CLOUD de Oracle corriendo linux.
 <img src='https://cdn.discordapp.com/attachments/902952023874494505/1050213531087274045/image.png'></img>
 <img src='https://cdn.discordapp.com/attachments/902952023874494505/1050213623366164500/image.png'></img>
 
-### Booking Class Docentes
+### Booking Class Alumnos
 
 Este repositorio solo constituye una parte de la prueba, ya que en si esta aplicacion esta constituida por dos partes, la de los alumnos y la de los profesores.
 Si deseas ver el repositorio de los profesores, solo debes acceder a este <a href='https://github.com/notGabo/BookingClassDocentes_Soto_Venegas_005D'>link!<a>
